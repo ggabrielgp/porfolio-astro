@@ -1,0 +1,45 @@
+---
+import Badge from "../components/Badge.astro";
+import Layout from "../layouts/Layout.astro";
+import LinkedinIcon from "../icons/Linkedin.astro";
+---
+
+<Layout title="Welcome to Astro.">
+  <main>
+    <section class="w-full lg:w-[740px] mx-auto py-44">
+      <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4">
+        Hey, soy Gabriel
+        <a
+          href="https://linkedin.com/in/gabriel-gómez-248819186/"
+          target="_blank"
+          rel="noopener"
+          class="flex justify-center items-center"
+        >
+          <Badge>Disponible para trabajar</Badge>
+        </a>
+      </h1>
+      <h2 class="text-2xl opacity-80 text-wrap">
+        <span>3+ años de experiencia.</span>
+        <span class="text-yellow-100">Desarrollador Web.</span>
+        <span class="text-red-200"><br />De Valparaíso, Chile🌶️.</span>
+        <br />
+        <span class="opacity-75"
+          >Especializado en Javascript con React y Node</span
+        >
+      </h2>
+
+      <ul>
+        <li>
+          <a
+            href="https://linkedin.com/in/gabriel-gómez-248819186/"
+            target="_blank"
+            rel="noopener"
+          >
+            <LinkedinIcon class="w-6 h-6" />
+            LinkedIn
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+</Layout>
