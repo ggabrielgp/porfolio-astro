@@ -2,6 +2,8 @@
 import Badge from "../components/Badge.astro";
 import Layout from "../layouts/Layout.astro";
 import LinkedinIcon from "../icons/Linkedin.astro";
+import SocialPill from "../components/SocialPill.astro";
+import GitHubIcon from "../icons/GitHub.astro";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -19,6 +21,11 @@ import LinkedinIcon from "../icons/Linkedin.astro";
         </a>
       </h1>
       <h2 class="text-2xl opacity-80 text-wrap">
+        <span
+          class="font-bold text-blue-200 drop-shadow-md hover:drop-shadow-xl"
+          >Ingeniero en Informática.</span
+        >
+        <br />
         <span>3+ años de experiencia.</span>
         <span class="text-yellow-100">Desarrollador Web.</span>
         <span class="text-red-200"><br />De Valparaíso, Chile🌶️.</span>
@@ -28,18 +35,24 @@ import LinkedinIcon from "../icons/Linkedin.astro";
         >
       </h2>
 
-      <ul>
-        <li>
-          <a
-            href="https://linkedin.com/in/gabriel-gómez-248819186/"
-            target="_blank"
-            rel="noopener"
-          >
-            <LinkedinIcon class="w-6 h-6" />
-            LinkedIn
-          </a>
-        </li>
-      </ul>
+      <nav class="flex gap-4 mt-8">
+        <SocialPill
+          href="https://linkedin.com/in/gabriel-gómez-248819186/"
+          target="_blank"
+          rel="noopener"
+        >
+          <LinkedinIcon class="w-6 h-6" />
+          LinkedIn
+        </SocialPill>
+        <SocialPill
+          href="https://github.com/ggabrielgp"
+          target="_blank"
+          rel="noopener"
+        >
+          <GitHubIcon class="w-6 h-6" />
+          GitHub
+        </SocialPill>
+      </nav>
     </section>
   </main>
 </Layout>
