@@ -1,0 +1,36 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIENCE = [
+  {
+    date: "julio 2023 - diciembre 2023",
+    title: "Analista Desarrollador - Kabeli, cliente Itaú",
+    description:
+      "Desarrollo de nuevas funcionalidades en modyo (liquid) y javascript para marcas de Google Analythics 4",
+    link: "",
+  },
+  {
+    date: "febrero 2022 - febrero 2023",
+    title: "Desarrollador FullStack - Aligare",
+    description:
+      "Desempeño como fullstack en diversos proyectos, con clientes como: Nueva Más Vida (front-end), Saesa (front-end), Blue Express (fullstack), INE: Plataforma Censal (fullstack), Claro (front-end). Con tecnologías cómo: React, Scss, Node, Sequelize, Express, Angular, Postgresql",
+  },
+  {
+    date: "noviembre 2020 - enero 2022",
+    title: "Ingeniero de software - Ingeniería Wiseconn S.A",
+    description:
+      "Proyecto de gestión de Campos de riego y usuarios, desarrollado para control detallado del riego automatizado en campos, buscando la forma más óptima para obtener el mejor producto. También, la gestión de tanto como usuarios administradores del campo a usuarios simples, con diferentes roles y actividades. Con tecnologías cómo: Angular, React Node AWS.",
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    EXPERIENCE.map((exp) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...exp} />
+      </li>
+    ))
+  }
+  <li class="mb-10 ms-4"></li>
+</ol>
