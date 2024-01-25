@@ -35,6 +35,8 @@ const { title, description } = Astro.props;
 <style is:global>
   :root {
     color-scheme: light dark;
+    prefers-color-scheme: light dark;
+    --theme-background-color: #0a0a0a;
   }
   html {
     font-family: "Onest Variable", system-ui, sans-serif;
@@ -50,6 +52,11 @@ const { title, description } = Astro.props;
   @media (prefers-reduced-motion: reduce) {
     html {
       scroll-behavior: auto;
+    }
+  }
+  @media (prefers-color-scheme: light dark) {
+    :root {
+      --theme-background-color: #0a0a0a;
     }
   }
 </style>
